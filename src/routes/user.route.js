@@ -4,7 +4,7 @@ import { upload } from "../middlewares/multer.middleware.js";
 const router = Router();
 
 router.route("/register").post( //upload is middleware so just before executing regiterUser function first upload will be executed
-    upload.fields(
+    upload.fields([
         {
             name: "avatar",
             maxCount: 1
@@ -13,6 +13,6 @@ router.route("/register").post( //upload is middleware so just before executing 
             name: "coverImage",
             maxCount: 1
         }
-    ),
+    ]),
     registerUser)
 export default router

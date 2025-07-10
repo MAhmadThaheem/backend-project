@@ -34,4 +34,4 @@ const upLoadOnCloudinary= async (localFilePath)=>{
 
 console.log(uploadResult);
     
-    
+export {upLoadOnCloudinary}
